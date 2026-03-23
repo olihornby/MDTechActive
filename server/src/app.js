@@ -1,0 +1,18 @@
+const express = require('express');
+const cors = require('cors');
+
+const apiRouter = require('./routes');
+const { notFoundHandler, errorHandler } = require('./middleware/errorHandler');
+
+const app = express();
+
+const clientOrigin = process.env.CLIENT_ORIGIN || 'http://127.0.0.1:5173';
+app.use(cors({ origin: clientOrigin }));
+app.use(express.json());
+
+app.use('/api', apiRouter);
+
+app.use(notFoundHandler);
+app.use(errorHandler);
+
+module.exports = app;
