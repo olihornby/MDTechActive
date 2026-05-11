@@ -87,33 +87,33 @@ Success criteria:
 
 ### Phase 4: Frontend Setup (React + Bootstrap)
 
-- [ ] Initialize React app in `client` (Vite is preferred unless instructed otherwise).
-- [ ] Install `bootstrap`.
-- [ ] Import Bootstrap CSS in the React entry file (`main.jsx` or equivalent).
-- [ ] Build a base page with:
-	- [ ] Header/navbar
-	- [ ] Main content section
-	- [ ] Example Bootstrap grid/cards/buttons
-	- [ ] Footer
+- [x] Initialize React app in `client` (Vite is preferred unless instructed otherwise).
+- [x] Install `bootstrap`.
+- [x] Import Bootstrap CSS in the React entry file (`main.jsx` or equivalent).
+- [x] Build a base page with:
+	- [x] Header/navbar
+	- [x] Main content section
+	- [x] Example Bootstrap grid/cards/buttons
+	- [x] Footer
 
 Success criteria:
 - Frontend runs locally and Bootstrap styles are visibly applied.
 
 ### Phase 5: Connect Frontend and Backend
 
-- [ ] Add a frontend service utility for API calls.
-- [ ] Call `/api/health` from React and display status on the page.
-- [ ] Handle loading and error states clearly.
+- [x] Add a frontend service utility for API calls.
+- [x] Call `/api/health` from React and display status on the page.
+- [x] Handle loading and error states clearly.
 
 Success criteria:
 - React page shows successful backend communication.
 
 ### Phase 6: MongoDB Integration (Mongoose)
 
-- [ ] Add environment variables in `server/.env` (for example `MONGO_URI`, `PORT`).
-- [ ] Create MongoDB connection logic in `server/src/config`.
-- [ ] Connect DB during server startup.
-- [ ] Add one sample model and one sample route/controller for CRUD foundation.
+- [x] Add environment variables in `server/.env` (for example `MONGO_URI`, `PORT`).
+- [x] Create MongoDB connection logic in `server/src/config`.
+- [x] Connect DB during server startup.
+- [x] Add one sample model and one sample route/controller for CRUD foundation.
 
 Success criteria:
 - Server connects to MongoDB without crashing.
@@ -121,9 +121,9 @@ Success criteria:
 
 ### Phase 7: Local-Only Testing and Safety
 
-- [ ] Confirm both client and server run on localhost only.
-- [ ] Ensure CORS allows only local frontend origin(s) used by the project.
-- [ ] Add clear run commands in README for local testing.
+- [x] Confirm both client and server run on localhost only.
+- [x] Ensure CORS allows only local frontend origin(s) used by the project.
+- [x] Add clear run commands in README for local testing.
 
 Success criteria:
 - The app is testable from your machine and not exposed publicly.
@@ -134,9 +134,9 @@ Reference link:
 - https://search.brave.com/search?q=how+would+i+implement+bootstrap+and+a+MERN+stack+into+a+project&summary=1&conversation=08db143a609d4d6b20ce9eb8a4ed00fa7461
 
 Copilot should:
-- [ ] Pull practical guidance from the link.
-- [ ] Apply only relevant, up-to-date practices.
-- [ ] Prefer official docs (React, Bootstrap, Express, MongoDB) when there is conflict.
+- [x] Pull practical guidance from the link.
+- [x] Apply only relevant, up-to-date practices.
+- [x] Prefer official docs (React, Bootstrap, Express, MongoDB) when there is conflict.
 
 Success criteria:
 - Implemented setup reflects sound MERN + Bootstrap practices.
@@ -166,10 +166,10 @@ npm install bootstrap
 - [x] `.github/copilot-Instructions.md` exists and is current.
 - [x] MERN structure is scaffolded and organized.
 - [x] Backend runs locally on `127.0.0.1`.
-- [ ] Frontend runs locally with Bootstrap styling.
-- [ ] Frontend can call backend successfully.
-- [ ] MongoDB is connected through Mongoose.
-- [ ] Local testing instructions are documented in README.
+- [x] Frontend runs locally with Bootstrap styling.
+- [x] Frontend can call backend successfully.
+- [x] MongoDB is connected through Mongoose.
+- [x] Local testing instructions are documented in README.
 
 ## Notes for Future Tasks
 

@@ -7,7 +7,9 @@ const connectToDatabase = async () => {
     throw new Error('Missing MONGO_URI in environment configuration');
   }
 
-  await mongoose.connect(mongoUri);
+  await mongoose.connect(mongoUri, {
+    serverSelectionTimeoutMS: Number(process.env.MONGO_TIMEOUT_MS || 5000),
+  });
 };
 
 module.exports = { connectToDatabase };
