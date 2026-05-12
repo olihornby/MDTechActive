@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 const TestHome = () => <h1>Test Home</h1>;
 const TestAbout = () => <h1>Test About</h1>;

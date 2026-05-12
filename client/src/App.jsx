@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Navigate, Route, Routes } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import HostDashboard from './pages/HostDashboard';
 import HostGame from './pages/HostGame';
