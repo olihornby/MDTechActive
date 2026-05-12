@@ -6,11 +6,10 @@ const { notFoundHandler, errorHandler } = require('./middleware/errorHandler');
 
 const app = express();
 
-const localOriginPattern = /^https?:\/\/(127\.0\.0\.1|localhost)(:\d+)?$/i;
 const configuredOrigins = String(process.env.CLIENT_ORIGIN || 'http://127.0.0.1:5173')
 	.split(',')
 	.map((origin) => origin.trim())
-	.filter((origin) => localOriginPattern.test(origin));
+	.filter(Boolean);
 
 const allowedOrigins = new Set(
 	configuredOrigins.length > 0 ? configuredOrigins : ['http://127.0.0.1:5173']
