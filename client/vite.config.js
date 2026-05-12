@@ -5,7 +5,7 @@ import { resolve } from 'path'
 // https://vite.dev/config/
 export default defineConfig({
   root: './',
-  base: '/mdtechactive/',
+  base: '/mdtechactive/dist/',
   plugins: [react()],
   server: {
     host: '127.0.0.1',
