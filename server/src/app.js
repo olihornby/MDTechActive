@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 
 const apiRouter = require('./routes');
 const { notFoundHandler, errorHandler } = require('./middleware/errorHandler');
@@ -33,6 +34,13 @@ app.use(
 app.use(express.json());
 
 app.use('/api', apiRouter);
+
+const clientDistPath = path.resolve(__dirname, '../../client/dist');
+app.use(express.static(clientDistPath));
+
+app.get(/^(?!\/api(?:\/|$)).*/, (request, response) => {
+	response.sendFile(path.join(clientDistPath, 'index.html'));
+});
 
 app.use(notFoundHandler);
 app.use(errorHandler);
